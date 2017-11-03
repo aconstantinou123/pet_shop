@@ -77,7 +77,8 @@ def sell_pet_to_customer(pet_shop, pet_name, customer)
     find_pet_by_name(pet_shop, pet_name)
 
     add_pet_to_customer(customer, pet_name)
-    
+
+    increase_pets_sold(pet_shop, customer[:pets].length)
   # return customer_pet_count(customer)
   # return pets_sold(pet_shop)
   # return total_cash(pet_shop)
