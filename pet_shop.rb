@@ -74,12 +74,21 @@ def customer_can_afford_pet(customers_money, new_pet_value)
 end
 
 def sell_pet_to_customer(pet_shop, pet, customer)
+
+  if pet != nil
+
     add_or_remove_cash(pet_shop, pet[:price])
 
     add_pet_to_customer(customer, pet)
 
     increase_pets_sold(pet_shop, customer[:pets].length)
 
+  else
+    return customer_pet_count(customer)
+    return pets_sold(pet_shop)
+    return total_cash(pet_shop)
+end
+    # find_pet_by_name(pet_shop, pet)
 
   # return customer_pet_count(customer)
   # return pets_sold(pet_shop)
