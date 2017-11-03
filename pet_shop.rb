@@ -39,4 +39,5 @@ def find_pet_by_name(shop, pet_name)
       return pet = {name: pet_name}
     end
   end
+  puts pet
 end
