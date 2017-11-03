@@ -72,3 +72,23 @@ def customer_can_afford_pet(customers_money, new_pet_value)
     return false
   end
 end
+
+def sell_pet_to_customer(pet_shop, pet_name, customer)
+    find_pet_by_name(pet_shop, pet_name)
+
+    add_pet_to_customer(customer, pet_name)
+    
+  # return customer_pet_count(customer)
+  # return pets_sold(pet_shop)
+  # return total_cash(pet_shop)
+end
+
+# def find_pet_by_name(shop, pet_name)
+#   pet = {}
+#   for pet in shop[:pets]
+#     if pet_name == pet[:name]
+#       return pet = {name: pet_name}
+#     end
+#   end
+#   puts pet
+# end
