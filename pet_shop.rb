@@ -33,7 +33,6 @@ def pets_by_breed(shop, breed)
 end
 
 def find_pet_by_name(shop, pet_name)
-  pet = {}
   for pet in shop[:pets]
     if pet_name == pet[:name]
       return pet
@@ -89,13 +88,3 @@ def sell_pet_to_customer(pet_shop, pet, customer)
     return total_cash(pet_shop)
   end
 end
-
-# def find_pet_by_name(shop, pet_name)
-#   pet = {}
-#   for pet in shop[:pets]
-#     if pet_name == pet[:name]
-#       return pet = {name: pet_name}
-#     end
-#   end
-#   puts pet
-# end
