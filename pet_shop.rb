@@ -36,10 +36,10 @@ def find_pet_by_name(shop, pet_name)
   pet = {}
   for pet in shop[:pets]
     if pet_name == pet[:name]
-      return pet = {name: pet_name}
+      return pet
     end
   end
-  puts pet
+  return nil
 end
 
 def remove_pet_by_name(shop, pet_name)
@@ -73,12 +73,14 @@ def customer_can_afford_pet(customers_money, new_pet_value)
   end
 end
 
-def sell_pet_to_customer(pet_shop, pet_name, customer)
-    find_pet_by_name(pet_shop, pet_name)
+def sell_pet_to_customer(pet_shop, pet, customer)
+    add_or_remove_cash(pet_shop, pet[:price])
 
-    add_pet_to_customer(customer, pet_name)
+    add_pet_to_customer(customer, pet)
 
     increase_pets_sold(pet_shop, customer[:pets].length)
+
+
   # return customer_pet_count(customer)
   # return pets_sold(pet_shop)
   # return total_cash(pet_shop)
