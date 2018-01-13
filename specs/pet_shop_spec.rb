@@ -31,7 +31,7 @@ class TestPetShop < Minitest::Test
             name: "Sir Percy",
             pet_type: :cat,
             breed: "British Shorthair",
-            price: 500
+            price: 600
           },
           {
             name: "King Bagdemagus",
